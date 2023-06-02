@@ -17,6 +17,7 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
        name: my-artifact
+       path: hello
        
     - name: make
       run: gcc -o hello main.c
