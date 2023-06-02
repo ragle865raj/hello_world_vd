@@ -20,8 +20,8 @@ jobs:
       with:
        name: my-artifact
        path: hello
-
-    - uses: actions/download-artifact@v3
-      with:
-       name: my-artifact
-       path: hello
+    - run: ./hello
+ #   - uses: actions/download-artifact@v3
+  #    with:
+   #    name: my-artifact
+    #   path: hello
