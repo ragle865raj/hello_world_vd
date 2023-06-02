@@ -10,18 +10,18 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v3
-
-    - uses: actions/download-artifact@v3
-      with:
-       name: my-artifact
-       path: hello
-       
+    
     - name: make
       run: gcc -o hello main.c
     - uses: actions/upload-artifact@v3
+      with:
+       name: my-artifact
+       path: hello
+
+    - uses: actions/download-artifact@v3
       with:
        name: my-artifact
        path: hello
